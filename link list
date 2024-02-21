@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+class node {
+    public:
+    int data;
+    node* next;
+    node(int data1, node* next1) {
+        data = data1;
+        next = next1;
+    }
+};
+
+int main() {
+    vector<int> a = { 2, 4, 1, 6 };
+    node* y = new node(a[0], nullptr);
+    // here alone y  consist adrs of node
+    //and y is an object
+    cout << y->next<<" "; // it gives the adrs
+    cout<< y->data;      //it gives the value of data
+}
