@@ -1,0 +1,16 @@
+#include<iostream>
+#include<map>
+using namespace std;
+int main(){
+	int n=6;
+	int a[n]={1,3,2,3,7,8};
+	int k=5;
+	map<int,int>hash;
+	for(int i=0;i<n;i++){
+		int t=k-a[i];
+		if(hash.find(t)!=hash.end()){
+			cout<<hash[t]<<" "<<i<<endl;
+		}
+		hash[a[i]]=i;
+	}
+}
